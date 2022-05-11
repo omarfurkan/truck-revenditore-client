@@ -28,6 +28,10 @@ const Blog = () => {
                 <p>SQL databases are best suited for complex queries.NoSQL databases are not so good for complex queries</p>
                 <p>SQL is vertically Scalable and noSQL is horizontally scalable</p>
                 <p>SQL follows ACID (atomicity, consistency, isolation and duration) property. NoSQl Follows CAP(consistency, availability, partition tolerance). </p>
+                <h3>Ques: 4 What is the purpose of jwt and how does it work ?</h3>
+                <p>JSON Web Token (JWT) is an open standard (RFC 7519) that defines a compact and self-contained way for securely transmitting information between parties as a JSON object. This information can be verified and trusted because it is digitally signed.</p>
+                <p>Purpose of JWT:- 1.Authorization: This is the most common scenario for using JWT. Once the user is logged in, each subsequent request will include the JWT, allowing the user to access routes, services, and resources that are permitted with that token. Single Sign On is a feature that widely uses JWT nowadays, because of its small overhead and its ability to be easily used across different domains. 2. Information Exchange: JSON Web Tokens are a good way of securely transmitting information between parties. Because JWTs can be signed—for example, using public/private key pairs—you can be sure the senders are who they say they are. Additionally, as the signature is calculated using the header and the payload, you can also verify that the content hasn't been tampered with.</p>
+                <p>How does it work: In authentication, when the user successfully logs in using their credentials, a JSON Web Token will be returned. Since tokens are credentials, great care must be taken to prevent security issues. In general, you should not keep tokens longer than required.</p>
             </div>
         </div>
     );
