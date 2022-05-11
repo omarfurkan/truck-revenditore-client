@@ -1,0 +1,30 @@
+.review-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+  gap: 20px;
+  text-align: center;
+}
+
+.review {
+  background-color: #f6f6f6;
+}
+.review img {
+  margin: 20px 0;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+}
+
+.review h5 {
+  color: #ffb001;
+}
+.review p {
+  padding-left: 10px;
+  padding-right: 10px;
+  color: #999999;
+}
+
+.review p small {
+  color: #696969;
+}
