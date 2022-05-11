@@ -1,0 +1,18 @@
+.about-container {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  align-items: center;
+  text-align: justify;
+}
+.about-container h2 {
+  color: #ffb001;
+  font-weight: bold;
+}
+
+.about-container img {
+  width: 100%;
+}
+.about-container p {
+  color: #999999;
+  font-weight: 600;
+}

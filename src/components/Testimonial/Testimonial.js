@@ -6,8 +6,8 @@ import person3 from '../../Images/person3.jpg';
 const Testimonial = () => {
     return (
         <div className='testimonial container my-5 mb-5'>
-            <p className='text-center'>What Our Happy Investors say about Us</p>
-            <h3 className='text-center'>Our Testimonial</h3>
+            <h2 className='text-center'>Our Testimonial</h2>
+            <p className='text-center mb-5'>What Our Happy Investors say about Us</p>
             <div className='review-container'>
 
                 <div className='review'>
