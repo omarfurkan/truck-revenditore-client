@@ -1,0 +1,17 @@
+.item-container {
+  border: 3px solid #ffb001;
+  border-radius: 0 50px 0 50px;
+}
+.img-item {
+  height: 300px;
+  width: 350px;
+  border-radius: 0 50px 0 0px;
+}
+.update-btn {
+  border: none;
+  padding: 10px 20px;
+  border-radius: 0 20px 0 20px;
+  color: white;
+  background-color: #ffb001;
+  font-weight: 600;
+}
