@@ -12,7 +12,7 @@ const Register = () => {
             </div>
 
             <div>
-                <h3 className='text-center'>Register</h3>
+                <h3 className='text-center my-5'>Register</h3>
                 <form>
                     <label htmlFor="email">Email</label>
                     <br />

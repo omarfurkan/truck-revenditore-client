@@ -4,6 +4,10 @@
   align-items: center;
   justify-items: center;
 }
+.register-container h3 {
+  color: #ffb001;
+  font-weight: bold;
+}
 
 .register-container input {
   display: block;
