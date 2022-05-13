@@ -30,7 +30,14 @@ const ItemDetail = () => {
                     <button className='update-btn'>Delivered</button>
                 </div>
             </div>
-        </div>
+            <div className=''>
+                <form className='text-center my-5'>
+                    <input type="number" name="" id="" placeholder='Restock the items' className='me-5' />
+
+                    <input type="submit" value="Restock" className='update-btn' />
+                </form>
+            </div>
+        </div >
     );
 };
 

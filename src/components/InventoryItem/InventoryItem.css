@@ -15,3 +15,8 @@
   background-color: #ffb001;
   font-weight: 600;
 }
+.regis-log a {
+  color: #ffb001;
+  text-decoration-thickness: 2px;
+  font-weight: bold;
+}
