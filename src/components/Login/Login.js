@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import loginImg from '../../Images/login.png'
+import SocialLogin from '../SocialLogin/SocialLogin';
 import './Login.css'
 
 const Login = () => {
@@ -22,11 +23,13 @@ const Login = () => {
                     <br />
                     <input type="password" name="password" required />
                     <br />
-                    <button className="update-btn" type="submit">Register</button>
+                    <button className="update-btn" type="submit">LogIn</button>
                 </form>
-                <p className='mt-3 regis-log' >New at Truck Revenditore?
+                <p className='mt-3 regis-log text-center' >New at Truck Revenditore?
                     <Link to='/register'> <span className='regis-log'> Register</span> </Link>
                 </p>
+                <p className='text-center'>or</p>
+                <SocialLogin></SocialLogin>
             </div>
         </div>
     );
