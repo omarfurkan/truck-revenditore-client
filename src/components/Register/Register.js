@@ -13,7 +13,7 @@ const Register = () => {
     const [error, setError] = useState('');
     const navigate = useNavigate();
 
-    const [createUserWithEmailAndPassword, user] = useCreateUserWithEmailAndPassword(auth);
+    const [createUserWithEmailAndPassword, user] = useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
 
     if (user) {
         navigate('/')
@@ -29,13 +29,13 @@ const Register = () => {
     const handleConfirmPasswordChange = event => {
         setConfirmPassword(event.target.value)
     }
-    const handleRegisterUser = event => {
+    const handleRegisterUser = async event => {
         event.preventDefault();
         if (password !== confirmPassword) {
             setError('Password did not match')
             return;
         }
-        createUserWithEmailAndPassword(email, password)
+        await createUserWithEmailAndPassword(email, password)
     }
 
 

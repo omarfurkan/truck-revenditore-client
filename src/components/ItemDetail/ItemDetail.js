@@ -5,6 +5,8 @@ import './ItemDetail.css';
 const ItemDetail = () => {
     const { id } = useParams()
     const [itemDetail, setItemDetail] = useState({});
+
+
     useEffect(() => {
         const url = `http://localhost:7000/product/${id}`
         console.log(url)
