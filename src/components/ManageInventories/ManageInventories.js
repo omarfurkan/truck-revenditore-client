@@ -1,25 +1,39 @@
 import React, { useEffect, useState } from 'react';
-import InventoryItem from '../InventoryItem/InventoryItem';
+import ManageItem from '../ManageItem/ManageItem';
+import './ManageInventories.css'
 
 const ManageInventories = () => {
-    const [inventoryItems, setInventoryItems] = useState([]);
+    const [manageItems, setManageItems] = useState([]);
     useEffect(() => {
         fetch('http://localhost:7000/product')
             .then(res => res.json())
-            .then(data => setInventoryItems(data))
+            .then(data => setManageItems(data))
     })
     return (
         <div className='container inventory-container'>
             <h2 className='text-center my-5'>Inventory Items</h2>
-            <div className='items-container mb-5 pb-5'>
-                {
-                    inventoryItems.map(inventoryItem => <InventoryItem
-                        key={inventoryItem._id}
-                        inventoryItem={inventoryItem}>
-                    </InventoryItem>)
-                }
+            <div>
+                <table>
+                    <tbody>
+                        <tr>
+                            <th>Name</th>
+                            <th>Information</th>
+                            <th>Delete</th>
+                        </tr>
+
+                        {
+                            manageItems.map(manageItem => <ManageItem
+                                key={manageItem._id}
+                                manageItem={manageItem}>
+                            </ManageItem>)
+
+                        }
+                    </tbody>
+                </table>
+
+
             </div>
-        </div>
+        </div >
     );
 };
 

@@ -15,7 +15,7 @@ const InventoryItem = ({ inventoryItem }) => {
             <p>{description}</p>
             <h5>Price: {price}</h5>
             <p><small>Quantity: {quantity}</small></p>
-            <p>Supplier: {supplier}</p>
+            <p>Supplier:{supplier}</p>
             <button
                 className='update-btn'
                 onClick={() => navigateToItemDetail(_id)}
