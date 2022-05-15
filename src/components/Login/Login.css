@@ -1,0 +1,8 @@
+.reset-btn {
+  border: none;
+  background-color: transparent;
+  color: #ffb001;
+  font-weight: bold;
+  text-decoration: underline;
+  margin-top: 10px;
+}

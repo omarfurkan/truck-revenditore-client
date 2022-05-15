@@ -1,15 +1,19 @@
 import React, { useState } from 'react';
-import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import { useSendPasswordResetEmail, useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { toast, ToastContainer } from 'react-toastify';
 import auth from '../../firebase.init';
 import loginImg from '../../Images/login.png'
+import Loading from '../Loading/Loading';
 import SocialLogin from '../SocialLogin/SocialLogin';
 import './Login.css'
+import 'react-toastify/dist/ReactToastify.css';
 
 const Login = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-    const [signInWithEmailAndPassword, user, error] = useSignInWithEmailAndPassword(auth);
+    const [signInWithEmailAndPassword, user, loading, error] = useSignInWithEmailAndPassword(auth);
+    const [sendPasswordResetEmail, sending] = useSendPasswordResetEmail(auth);
 
     const navigate = useNavigate();
     const location = useLocation();
@@ -17,6 +21,9 @@ const Login = () => {
 
     if (user) {
         navigate(from, { replace: true });
+    }
+    if (loading || sending) {
+        return <Loading></Loading>
     }
 
 
@@ -52,13 +59,31 @@ const Login = () => {
                     <input onChange={handlePasswordChange} type="password" name="password" required />
                     <br />
                     <p className='text-danger'>{error?.message}</p>
+
                     <button className="update-btn" type="submit">LogIn</button>
                 </form>
+                <p> Rorget Password?
+                    <button className='reset-btn'
+                        onClick={async () => {
+                            if (email) {
+                                await sendPasswordResetEmail(email);
+                                toast('Sent email');
+                            }
+                            else {
+                                toast('please enter your email address')
+                            }
+                        }}
+                    >
+                        Reset password
+                    </button>
+                </p>
+
                 <p className='mt-3 regis-log text-center' >New at Truck Revenditore?
                     <Link to='/register'> <span className='regis-log'> Register</span> </Link>
                 </p>
                 <p className='text-center'>or</p>
                 <SocialLogin></SocialLogin>
+                <ToastContainer />
             </div>
         </div>
     );
