@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import ManageItem from '../ManageItem/ManageItem';
 import './ManageInventories.css'
 
@@ -12,8 +13,9 @@ const ManageInventories = () => {
     return (
         <div className='container inventory-container'>
             <h2 className='text-center my-5'>Inventory Items</h2>
+            <Link to='/addinventory'> <button className='update-btn mb-5 '>Add Item</button></Link>
             <div>
-                <table>
+                <table className='mb-5'>
                     <tbody>
                         <tr>
                             <th>Name</th>
@@ -33,6 +35,8 @@ const ManageInventories = () => {
 
 
             </div>
+
+
         </div >
     );
 };

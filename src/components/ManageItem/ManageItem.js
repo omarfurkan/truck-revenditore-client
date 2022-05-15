@@ -3,6 +3,30 @@ import './ManageItem.css'
 
 const ManageItem = ({ manageItem }) => {
     const { _id, name, img, description, price, quantity, supplier } = manageItem;
+
+
+    const handleItemDelete = id => {
+        // confirmation popup includes while deleting item
+        const proceed = window.confirm('Are you Sure?')
+        if (proceed) {
+            console.log(_id);
+            const url = `http://localhost:7000/product/${_id}`;
+            fetch(url, {
+                method: 'DELETE'
+            })
+                .then(res => res.json())
+                .then(data => {
+                    if (data.deletedCount > 0) {
+                        console.log('deleted')
+                        const remains = manageItem.filter(manageItem => manageItem._id !== id);
+                        return remains;
+                    }
+
+                })
+        }
+
+    }
+
     return (
         <>
             <tr>
@@ -21,7 +45,7 @@ const ManageItem = ({ manageItem }) => {
                     </div>
                 </td>
                 <td>
-                    <button className='update-btn'>Delete</button>
+                    <button onClick={() => handleItemDelete(_id)} className='update-btn'>Delete</button>
                 </td>
             </tr>
 
