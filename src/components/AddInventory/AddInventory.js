@@ -1,7 +1,27 @@
 import React from 'react';
-import addImg from '../../Images/add.png'
+import addImg from '../../Images/add.png';
+import { useForm } from "react-hook-form";
 
 const AddInventory = () => {
+    const { register, handleSubmit } = useForm();
+    const onSubmit = data => {
+        console.log(data);
+        const url = `http://localhost:7000/product`
+        fetch(url, {
+            method: 'POST',
+            headers: {
+                'content-type': 'aplication/json'
+            },
+            body: JSON.stringify(data)
+        })
+            .then(res => res.json())
+            .then(result => {
+                console.log(result)
+            })
+    }
+
+
+
     return (
         <div className='container register-container my-5'>
 
@@ -11,12 +31,13 @@ const AddInventory = () => {
 
             <div>
                 <h3 className='text-center'>Add Item</h3>
-                <form >
-                    <input className='my-3' type="text" name="" id="" placeholder='Name of Item' />
-                    <input className='my-3' type="text" name="" id="" placeholder='Description' />
-                    <input className='my-3' type="text" name="" id="" placeholder='Price' />
-                    <input className='my-3' type="text" name="" id="" placeholder='Quantity' />
-                    <input className='my-3' type="text" name="" id="" placeholder='Supplier' />
+                <form onSubmit={handleSubmit(onSubmit)}>
+                    <input className='my-3' type="text" {...register("name")} placeholder='Name of Item' />
+                    <input className='my-3' {...register("img")} placeholder='URL of Item Image' />
+                    <textarea className='my-3' {...register("description")} placeholder='Description' />
+                    <input className='my-3' {...register("price")} placeholder='Price' />
+                    <input className='my-3' {...register("quantity")} placeholder='Quantity' />
+                    <input className='my-3' {...register("supplier")} placeholder='Supplier' />
 
 
                     <button className="update-btn" type="submit">Add Item</button>
