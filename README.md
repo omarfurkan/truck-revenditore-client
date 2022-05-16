@@ -1,3 +1,19 @@
+# Truck Revenditore
+
+Make your on Way with **Truck Revenditore**
+
+### Decription
+
+Truck Renditore is user friendly website to manage all the possible things that deals in any large number of turcks. This Website holds all the facilities for individual user to manage all his account, deal, entries, item and other related matter which is related in dealing with truck. Truck Revenditore is for any entrepreneur who wants to deal in trucks.
+
+### features and functionality
+
+- User friendly website mobile responsive
+- Completely authrization and authentication feature applied
+- Any product can be added deleted update and display for individual user
+- Home page includes inventory item , testimonial and about section and there is individual page for all the inentory items.
+  -Besides that there are blog, manage ites, add item page are availabe, spcially my items page for user that selected item could be desplayed
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
