@@ -12,7 +12,7 @@ Truck Renditore is user friendly website to manage all the possible things that 
 - Completely authrization and authentication feature applied
 - Any product can be added deleted update and display for individual user
 - Home page includes inventory item , testimonial and about section and there is individual page for all the inentory items.
-  -Besides that there are blog, manage ites, add item page are availabe, spcially my items page for user that selected item could be desplayed
+- Besides that there are blog, manage ites, add item page are availabe, spcially my items page for user that selected item could be desplayed
 
 # Getting Started with Create React App
 

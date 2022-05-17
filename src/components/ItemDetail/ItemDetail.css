@@ -7,3 +7,13 @@
 .quantity {
   color: #ffb001;
 }
+
+/* responsive for mobile size 360 */
+@media only screen and (max-width: 360px) {
+  .detail-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .quantity-form {
+    padding-bottom: 10px;
+  }
+}

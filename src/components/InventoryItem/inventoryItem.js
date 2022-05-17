@@ -4,9 +4,14 @@ import './InventoryItem.css'
 
 const InventoryItem = ({ inventoryItem }) => {
     const { _id, name, img, description, price, quantity, supplier } = inventoryItem;
+
+
     const navigate = useNavigate();
+
     const navigateToItemDetail = id => {
         navigate(`/product/${id}`)
+        console.log(id)
+
     }
     return (
         <div className='item-container p-3'>

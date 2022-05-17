@@ -6,7 +6,7 @@ import './ManageInventories.css'
 const ManageInventories = () => {
     const [manageItems, setManageItems] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:7000/product')
+        fetch('https://morning-ridge-30051.herokuapp.com/product')
             .then(res => res.json())
             .then(data => setManageItems(data))
     })

@@ -10,7 +10,7 @@ const ManageItem = ({ manageItem }) => {
         const proceed = window.confirm('Are you Sure?')
         if (proceed) {
             console.log(_id);
-            const url = `http://localhost:7000/product/${_id}`;
+            const url = `https://morning-ridge-30051.herokuapp.com/product/${_id}`;
             fetch(url, {
                 method: 'DELETE'
             })

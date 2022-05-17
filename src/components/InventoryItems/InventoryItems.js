@@ -7,11 +7,11 @@ import './InevtoryItems.css';
 const InventoryItems = () => {
     const [inventoryItems, setInventoryItems] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:7000/product')
+        fetch('https://morning-ridge-30051.herokuapp.com/product')
             .then(res => res.json())
             .then(data => setInventoryItems(data))
-    })
-    const inevtoryItemsSlice = inventoryItems.slice(0, 6)
+    }, [])
+    const inevtoryItemsSlice = inventoryItems.slice(0, 6);
     return (
         <div className='container inventory-container'>
             <h2 className='text-center my-5'>Inventory Items</h2>
