@@ -8,6 +8,9 @@ Truck Renditore is user friendly website to manage all the possible things that 
 
 ### features and functionality
 
+- Implementation of CRUD operation
+- Complete inventory management system with secure API using JWT
+- Authentication Implemented and fully responsive
 - User friendly website mobile responsive
 - Completely authrization and authentication feature applied
 - Any product can be added deleted update and display for individual user
